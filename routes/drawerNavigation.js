@@ -1,16 +1,16 @@
 import React from "react";
-import Home from "./screens/home";
-import About from "./screens/about";
-import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "../screens/home";
+import About from "../screens/about";
 // Screen component for the drawer
 
 const Drawer = createDrawerNavigator();
 
-function App() {
+function DrawerNavigation() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator>
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="About" component={About} />
       </Drawer.Navigator>
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default DrawerNavigation;
